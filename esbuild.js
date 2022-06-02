@@ -1,12 +1,12 @@
-const esbuild = require('esbuild');
-const { pnpPlugin } = require('@yarnpkg/esbuild-plugin-pnp');
+const esbuild = require("esbuild");
+const { pnpPlugin } = require("@yarnpkg/esbuild-plugin-pnp");
 
 esbuild
   .build({
-    entryPoints: ['./index.ts'],
-    minify: process.env.NODE_ENV === 'production',
+    entryPoints: ["./index.ts"],
+    minify: process.env.NODE_ENV === "production",
     bundle: true,
-    outfile: './bundle.js',
+    outfile: "./bundle.js",
     plugins: [pnpPlugin()],
     watch: true,
   })

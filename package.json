@@ -1,19 +1,13 @@
 {
-  "scripts": {
-    "start": "yarn node esbuild.js"
-  },
   "name": "simple-test-typescript",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "start": "yarn node esbuild.js",
+    "esbuild": "esbuild index.ts --bundle --outfile=bundle.js --watch"
+  },
+  "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "@types/big.js": "^6.1.3",
-    "@yarnpkg/esbuild-plugin-pnp": "^3.0.0-rc.5",
-    "esbuild": "^0.14.39",
-    "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "big.js": "^6.1.1"
-  },
-  "packageManager": "yarn@3.2.0"
+    "@yarnpkg/esbuild-plugin-pnp": "^3.0.0-rc.6",
+    "esbuild": "^0.14.42",
+    "typescript": "^4.7.2"
+  }
 }
